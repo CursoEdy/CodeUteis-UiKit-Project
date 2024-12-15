@@ -14,7 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window?.tintColor = .systemRed
+        
+        // Modificando cor do large tittle da navigation
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.gray]
+        
+        // Altera a cor dos botões da navigation
+        UINavigationBar.appearance().tintColor = .gray
+        
         return true
     }
 
