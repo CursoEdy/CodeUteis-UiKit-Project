@@ -69,7 +69,7 @@
                     <navigationItem key="navigationItem" title="Main view" id="6XI-jp-tAG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="K78-0i-yG5">
                             <connections>
-                                <segue destination="qcn-Md-I84" kind="show" id="fWM-NC-rth"/>
+                                <action selector="NavigationTeste:" destination="9mn-B4-VqR" id="koU-7e-DJ7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -78,6 +78,7 @@
                         <outlet property="labelName" destination="fiF-Vj-KEV" id="g81-W3-zQb"/>
                         <outlet property="textLoading" destination="pde-zC-3FQ" id="YQL-fA-QFB"/>
                         <outlet property="textName" destination="5Mg-fC-4CN" id="XgT-Cc-6Ij"/>
+                        <segue destination="qcn-Md-I84" kind="show" identifier="segueteste01" id="OMf-YS-vCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLZ-aW-nqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,11 +116,40 @@
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="fQP-kW-sGp"/>
                     <connections>
                         <outlet property="titleText" destination="aNc-PI-K7T" id="pGu-dH-Njm"/>
+                        <segue destination="A8y-It-hf4" kind="show" identifier="segueTela3" id="ykr-TE-ArE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcS-Dj-u9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2226.7175572519081" y="-344.36619718309862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pPM-Xd-pKn">
+            <objects>
+                <viewController id="A8y-It-hf4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ffO-Cc-Fm0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve7-cj-zwd">
+                                <rect key="frame" x="115" y="324" width="164" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Voltar para a tela 1"/>
+                                <connections>
+                                    <segue destination="g8q-1z-vIo" kind="unwind" unwindAction="segueNavigationWithSegue:" id="PTU-8u-Krl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0cf-V3-EVp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cvn-2A-hp7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyv-14-T25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="g8q-1z-vIo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2998" y="-344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s7m-ee-cPh">

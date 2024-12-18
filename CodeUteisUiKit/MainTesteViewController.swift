@@ -29,11 +29,28 @@ class MainTesteViewController: UIViewController {
         
     }
     
+    @IBAction func NavigationTeste(_ sender: Any) {
+        
+        // Chamando segue via código.
+//        performSegue(withIdentifier: "segueteste01", sender: nil)
+    }
+
+    // Funcao para executar um bloco de codigo ao tocar na tela.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        performSegue(withIdentifier: "segueteste01", sender: nil)
+    }
+    
     @IBAction func Enviar(_ sender: UIButton) {
+        
         labelName.text = textName.text
         indicatorLoading.isHidden = false
         indicatorLoading.startAnimating()
         textLoading.isHidden = false
+        
+    }
+    
+    //Unwid View
+    @IBAction func segueNavigation(segue: UIStoryboardSegue) {
         
     }
     

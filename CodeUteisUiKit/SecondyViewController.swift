@@ -20,20 +20,23 @@ class SecondyViewController: UIViewController {
     }
 
     @IBAction func Enviar(_ sender: UIButton) {
-        if games == nil {
-            games = TestClass(name: titleText.text?.uppercased() ?? "", idade: 1)
-        }
         
+        performSegue(withIdentifier: "segueTela3", sender: nil)
         
-        
-        do {
-            try titleText.text = games.name
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        //retorna para a view anterior
-        navigationController?.popViewController(animated: true)
+//        if games == nil {
+//            games = TestClass(name: titleText.text?.uppercased() ?? "", idade: 1)
+//        }
+//        
+//        
+//        
+//        do {
+//            try titleText.text = games.name
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        
+//        //retorna para a view anterior
+//        navigationController?.popViewController(animated: true)
     }
     
 
