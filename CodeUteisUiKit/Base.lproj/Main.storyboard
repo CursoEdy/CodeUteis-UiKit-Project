@@ -67,14 +67,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main view" id="6XI-jp-tAG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="K78-0i-yG5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="K78-0i-yG5">
+                            <connections>
+                                <segue destination="qcn-Md-I84" kind="show" id="fWM-NC-rth"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="indicatorLoading" destination="yaP-8K-azd" id="O09-Im-Yw1"/>
                         <outlet property="labelName" destination="fiF-Vj-KEV" id="g81-W3-zQb"/>
                         <outlet property="textLoading" destination="pde-zC-3FQ" id="YQL-fA-QFB"/>
                         <outlet property="textName" destination="5Mg-fC-4CN" id="XgT-Cc-6Ij"/>
-                        <segue destination="qcn-Md-I84" kind="show" identifier="secondySegue" id="2fU-As-sMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLZ-aW-nqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,14 +91,35 @@
                     <view key="view" contentMode="scaleToFill" id="70T-J0-5rR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-PI-K7T">
+                                <rect key="frame" x="101" y="196" width="204" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-Ke-Sga">
+                                <rect key="frame" x="161" y="704" width="71" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enviar"/>
+                                <connections>
+                                    <action selector="Enviar:" destination="qcn-Md-I84" eventType="touchUpInside" id="Ew8-iU-Gxu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="r4b-av-bi1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="fQP-kW-sGp"/>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="fQP-kW-sGp"/>
+                    <connections>
+                        <outlet property="titleText" destination="aNc-PI-K7T" id="pGu-dH-Njm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcS-Dj-u9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="-344"/>
+            <point key="canvasLocation" x="2226.7175572519081" y="-344.36619718309862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s7m-ee-cPh">

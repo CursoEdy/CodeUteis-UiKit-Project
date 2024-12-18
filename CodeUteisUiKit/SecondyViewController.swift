@@ -9,21 +9,32 @@ import UIKit
 
 class SecondyViewController: UIViewController {
 
+    @IBOutlet weak var titleText: UILabel!
+    
+    var games: TestClass!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func Enviar(_ sender: UIButton) {
+        if games == nil {
+            games = TestClass(name: titleText.text?.uppercased() ?? "", idade: 1)
+        }
+        
+        
+        
+        do {
+            try titleText.text = games.name
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        //retorna para a view anterior
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }

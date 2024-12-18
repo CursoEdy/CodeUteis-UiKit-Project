@@ -21,6 +21,12 @@ class MainTesteViewController: UIViewController {
         indicatorLoading.isHidden = true
         textLoading.isHidden = true
         // Do any additional setup after loading the view.
+        
+        testLoading()
+    }
+    
+    func testLoading() {
+        
     }
     
     @IBAction func Enviar(_ sender: UIButton) {
